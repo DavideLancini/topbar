@@ -1,0 +1,33 @@
+# Rust / Cargo
+/target/
+**/target/
+
+# Cargo lock: per binari si può tenere in repo; decommenta se vuoi ignorarlo
+# Cargo.lock
+
+# Build artifacts
+*.pdb
+*.so
+*.dylib
+*.dll
+
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.settings/
+*.sublime-*
+
+# OS
+.DS_Store
+Thumbs.db
+*.bak
+
+# Log e file temporanei
+*.log
+*.out
+.env
+.env.*

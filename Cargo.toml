@@ -1,0 +1,24 @@
+[package]
+name = "topbar"
+version = "0.1.0"
+edition = "2021"
+description = "Wayland status bar (Waybar-like), hyper-optimized, config at compile time"
+license = "MIT"
+
+[[bin]]
+name = "topbar"
+path = "src/main.rs"
+
+[dependencies]
+# Wayland (versioni compatibili tra loro)
+wayland-client = "0.31"
+wayland-protocols = { version = "0.31", features = ["client"] }
+wayland-protocols-wlr = { version = "0.3", features = ["client"] }
+
+# Event loop
+calloop = "0.12"
+
+# Rendering: font + buffer (tempfile per wl_shm)
+fontdue = "0.9"
+rustix = { version = "0.38", features = ["fs", "mm", "process"] }
+tempfile = "3"
